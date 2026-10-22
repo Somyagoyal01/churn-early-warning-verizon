@@ -1,0 +1,50 @@
+{
+  "rows": 8000,
+  "test_rows": 2400,
+  "metrics": {
+    "logistic": {
+      "roc_auc": 0.828,
+      "pr_auc": 0.619,
+      "top_decile_lift": 2.78,
+      "base_rate": 0.247
+    },
+    "gradient_boosting": {
+      "roc_auc": 0.815,
+      "pr_auc": 0.596,
+      "top_decile_lift": 2.79,
+      "base_rate": 0.247
+    },
+    "driver_classifier_macro_f1_synthetic_test": 0.953,
+    "driver_classifier_macro_f1_heldout_wording": 0.712,
+    "driver_model_only_macro_f1_heldout_wording": 0.185
+  },
+  "outreach": {
+    "contacted": 300,
+    "churners_reached_model": 193,
+    "churners_reached_random": 59,
+    "net_value_model": 41336.0,
+    "net_value_random": 4660.0,
+    "assumptions": {
+      "offer_cost": 30.0,
+      "save_rate": 0.25,
+      "months_value": 12
+    }
+  },
+  "top_risk_driver_mix": {
+    "network": 146,
+    "billing": 71,
+    "none": 51,
+    "service": 23,
+    "price": 8,
+    "device": 1
+  },
+  "top_risk_reason_codes": {
+    "contract_month-to-month": 285,
+    "tenure_months": 204,
+    "dropped_calls_30d": 147,
+    "bill_shock_flag": 104,
+    "monthly_charge": 78,
+    "payment_method_manual-online": 43
+  },
+  "business_brief": "# Weekly churn watchlist brief (synthetic data)\n\nCustomers contacted under budget: 300. Churners reached: 193 with the model vs 59 with random selection.\nEstimated net value (illustrative assumptions {'offer_cost': 30.0, 'save_rate': 0.25, 'months_value': 12}): 41336 vs 4660 for random.\n\n## What is driving risk in the top segment\n- network: 146 customers (49%) -> route to the network team's coverage fix list and offer a signal booster / Wi-Fi calling check\n- billing: 71 customers (24%) -> proactive bill explanation call and correct missing credits before the next cycle\n- none: 51 customers (17%) -> light-touch check-in; no offer\n- service: 23 customers (8%) -> callback from a senior agent with the open ticket history\n- price: 8 customers (3%) -> plan-fit review: move to a cheaper plan instead of losing the line\n- device: 1 customers (0%) -> targeted upgrade or trade-in offer\n\n## Most common reason codes\n- contract_month-to-month: 285\n- tenure_months: 204\n- dropped_calls_30d: 147\n- bill_shock_flag: 104\n- monthly_charge: 78\n- payment_method_manual-online: 43"
+}
